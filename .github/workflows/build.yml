@@ -1,3 +1,16 @@
-# Run tests
-name: Run tests
-run: mvn clean test
+name: Java CI with Maven
+
+on: 
+  push:
+    branches: ["main"]
+    
+jobs:
+  build: 
+
+    runs-on: ubuntu-latest
+    
+    steps:
+ # Run tests
+    
+      - name: Run tests
+        run: mvn clean test
